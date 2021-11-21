@@ -4,4 +4,4 @@ In this SQL problem, we would be designing an UI along with DB design of the cab
 
 <img src = "https://github.com/suhasmaddali/Images/blob/main/jordan-zdEsGs_His4-unsplash.jpg" width = "500" />
  
-It is important to design a database for the working of the cab reservation system. There are various contrainst that must be addressed when working with this system. There are a lot of other values that must also be determined before the successful implementation of the system. 
+It is important to design a database for the working of the cab reservation system. Furthermore, UI would be designed such that it would improve the overall experience in which an user would be taking a look at the features and their importance respectively. 
