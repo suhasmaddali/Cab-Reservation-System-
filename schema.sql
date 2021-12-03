@@ -8,6 +8,6 @@ CREATE TABLE customer (
   phone_number NUMERIC NOT NULL,
   rating FLOAT,
   wallet_balance float not null,
-  address varchar not null
+  user_address varchar not null
 );
 
