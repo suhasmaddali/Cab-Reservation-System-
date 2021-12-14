@@ -1,0 +1,59 @@
+<div class="container">
+    <h1>Choose Your availability</h1>
+    <form action="/driveravailpage/{{driver_id}}">
+  
+      <label for="availability"style="font-size:25px">Availability</label>
+      <!-- <select id="carl" name="carl">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select> -->
+<br/>
+<br/>
+<br/>
+      <select id="availability" name="Availability" style="width:75px" required=true>
+        <option value="1">Available</option>
+        <option value="0">Not available </option>
+       
+    </select>
+    <br/>
+    <br/>
+    <br/>
+      <label for="zips" style="font-size:25px">Choose a location of operation</label>
+      <!-- <select id="carl" name="carl">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select> -->
+      <br/>
+      <select id="zips" name="zip" style="width:200px" required=true>
+        {% for zip in zips %}
+          <option value={{zip}}>{{ zip }}</option>
+        {% endfor %}  
+    </select>
+    <br/>
+    <br/>
+    <br/>
+      <label for="carname" style="font-size:25px">Car Plate</label>
+      <!-- <select id="carl" name="carl">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select> -->
+      <br/>
+      <br/>
+      <br/>
+      <select id="carname" name="name" style="width:200px" required=true>
+        {% for car_plate in car_plates %}
+          <option value={{car_plate}}>{{ car_plate }}</option>
+        {% endfor %}  
+    </select>
+  
+     <br/>
+     <br/>
+     <br/>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div>

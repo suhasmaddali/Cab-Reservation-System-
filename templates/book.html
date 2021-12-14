@@ -1,0 +1,92 @@
+<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
+<div class="container_12">
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href= "{{ url_for('static',filename='booking/css/booking.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/camera.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery-migrate-1.2.1.js') }}"></script>
+    <!-- <script src="js/jquery-migrate-1.2.1.js"></script> -->
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/superfish.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.ui.totop.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.equalheights.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.mobilemenu.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/owl.carousel.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/camera.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.mobile.customized.min.js') }}"></script>
+
+
+
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <!--<![endif]-->
+    <script src="{{ url_for('static',filename='booking/js/booking.js') }}"></script>
+					<div class="grid_5">
+						<h3>Booking Form</h3>
+						<form id="bookingForm">
+							<div class="fl1">
+								<div class="tmInput">
+									<input name="Name" placeHolder="Name:" type="text" data-constraints='@NotEmpty @Required @AlphaSpecial'>
+								</div>
+								<div class="tmInput">
+									<input name="From" placeHolder="From:" type="text" data-constraints="@NotEmpty @Required ">
+								</div>
+							</div>
+							<div class="fl1">
+								<div class="tmInput">
+									<input name="Email" placeHolder="Email:" type="text" data-constraints="@NotEmpty @Required @Email">
+								</div>
+								<div class="tmInput mr0">
+									<input name="To" placeHolder="To:" type="text" data-constraints="@NotEmpty @Required">
+								</div>
+							</div>
+							<div class="clear"></div>
+							<strong>Time</strong>
+							<div class="tmInput">
+								<input name="Time" placeHolder="" type="text" data-constraints="@NotEmpty @Required">
+							</div>
+							<div class="clear"></div>
+							<strong>Date</strong>
+							<label class="tmDatepicker">
+								<input type="text" name="Date"	placeHolder='20/05/2014' data-constraints="@NotEmpty @Required @Date">
+							</label>
+							<div class="clear"></div>
+							<div class="tmRadio">
+								<p>Comfort</p>
+								<input name="Comfort" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+								<span>Cheap</span>
+								<input name="Comfort" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>Standart</span>
+								<input name="Comfort" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>Lux</span>
+							</div>
+							<div class="clear"></div>
+							<div class="fl1 fl2">
+								<em>Adults</em>
+								<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>1</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<div class="clear height1"></div>
+							</div>
+							<div class="fl1 fl2">
+								<em>Children</em>
+								<select name="Children" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>0</option>
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+							</div>
+							<div class="clear"></div>
+							<div class="tmTextarea">
+								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+							</div>

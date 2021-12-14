@@ -65,6 +65,39 @@
 							<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 								<ul class="sf-menu">
 									<li class="current"><a href="index.html">Home</a></li>
+									<!-- <li><button id="bookingbutton" onclick="senddata()">Book Now</button></li> -->
+
+									<li><form action="/search" method="get" autocomplete="off" class="subscribe-form">
+											<button name="booking" type="submit" value="{{result}}">Book Now</button>
+									</form></li>
+									<!-- <script>
+										var senddata = (file) => {
+    const formData = new FormData();
+    console.log("User_id: " + "{{result.cid}}")
+	console.log("User name:"+"{{result.uname}}")
+    
+    // Actual audio file appended
+    formData.append("customer_id", "{{result.cid}}");
+	formData.append("user_name","{{result.uname}}");
+  
+    
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/search", true);
+    xhr.send(formData);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log('xhr.readyState=', xhr.readyState);
+            console.log('xhr.status=', xhr.status);
+            console.log('response=', xhr.responseText);
+			window.location=xhr.responseText
+        }
+       
+       
+    }
+    return;
+};   
+									</script> -->
+									
 									<li><a href="/about">About</a></li>
 									<li><a href="/cars">Cars</a></li>
 									<li><a href="/services">Services</a></li>
@@ -78,6 +111,7 @@
 				</div>
 				<div class="container_12">
 					<div class="grid_12">
+						<h2>Welcome {{result['uname']}}</h2>
 						<h1>
 							<a href="index.html">
 
@@ -150,7 +184,7 @@ This is something we are thinking about. We will be up with it soon :).							<a
 			</div>
 <!--==============================Content=================================-->
 			<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
-				<div class="container_12">
+				<!-- <div class="container_12">
 					<div class="grid_5">
 						<h3>Booking Form</h3>
 						<form id="bookingForm">
@@ -213,15 +247,15 @@ This is something we are thinking about. We will be up with it soon :).							<a
 							<div class="clear"></div>
 							<div class="tmTextarea">
 								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
-							</div>
-							<a href="#" class="btn" data-type="submit">Submit</a>
-						</form>
+							</div> -->
+							<div>
+					
 					</div>
-					<div class="grid_6 prefix_1">
+					<!-- <div class="grid_6 prefix_1">
 						<a href="index2.html" class="type"><img src="{{ url_for('static',filename='images/page1_img1.jpg') }}" alt=""><span class="type_caption">Economy</span></a>
 						<a href="index2.html" class="type"><img src="{{ url_for('static',filename='images/page1_img2.jpg') }}" alt=""><span class="type_caption">Standard</span></a>
 						<a href="index2.html" class="type"><img src="{{ url_for('static',filename='images/page1_img3.jpg') }}" alt=""><span class="type_caption">Lux</span></a>
-					</div>
+					</div> -->
 					<div class="clear"></div>
 				</div>
 			</div>

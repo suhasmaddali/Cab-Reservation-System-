@@ -1,0 +1,221 @@
+<!-- Search input -->
+<!-- Search input -->
+<input id="searchInput" class="controls" type="text" placeholder="Enter a location">
+
+<!-- Google map -->
+<div id="map"></div>
+
+<!-- Display geolocation data -->
+<ul class="geo-data">
+    <li>Full Address: <span id="location"></span></li>
+    <li>Postal Code: <span id="postal_code"></span></li>
+    <li>Country: <span id="country"></span></li>
+    <li>Latitude: <span id="lat"></span></li>
+    <li>Longitude: <span id="lon"></span></li>
+</ul>
+<div id="map2">
+    <input id="searchInput2" class="controls" type="text" placeholder="Enter a location">
+
+</div>
+
+<ul class="geo-data2">
+    <li>Full Address: <span id="location2"></span></li>
+    <li>Postal Code: <span id="postal_code2"></span></li>
+    <li>Country: <span id="country2"></span></li>
+    <li>Latitude: <span id="lat2"></span></li>
+    <li>Longitude: <span id="lon2"></span></li>
+</ul>
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCFJ8VXOi4dfWgimXznK4JoL7jqGE-Ut44"></script>
+
+<script>
+    function initMap() {
+
+        
+        const  map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -33.8688, lng: 151.2195},
+          zoom: 13
+        });
+        var input = document.getElementById('searchInput');
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+
+        var input2 = document.getElementById('searchInput2');
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input2);
+
+        var autocomplete2 = new google.maps.places.Autocomplete(input2);
+        autocomplete2.bindTo('bounds', map);
+    
+       
+    
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+            map: map,
+            anchorPoint: new google.maps.Point(0, -29)
+        });
+    
+        autocomplete.addListener('place_changed', function() {
+            infowindow.close();
+            marker.setVisible(false);
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                window.alert("Autocomplete's returned place contains no geometry");
+                return;
+            }
+      
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17);
+            }
+            marker.setIcon(({
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
+            }));
+            marker.setPosition(place.geometry.location);
+            marker.setVisible(true);
+        
+            var address = '';
+            if (place.address_components) {
+                address = [
+                  (place.address_components[0] && place.address_components[0].short_name || ''),
+                  (place.address_components[1] && place.address_components[1].short_name || ''),
+                  (place.address_components[2] && place.address_components[2].short_name || '')
+                ].join(' ');
+            }
+        
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+            infowindow.open(map, marker);
+          
+            // Location details
+            for (var i = 0; i < place.address_components.length; i++) {
+                if(place.address_components[i].types[0] == 'postal_code'){
+                    document.getElementById('postal_code').innerHTML = place.address_components[i].long_name;
+                }
+                if(place.address_components[i].types[0] == 'country'){
+                    document.getElementById('country').innerHTML = place.address_components[i].long_name;
+                }
+            }
+            document.getElementById('location').innerHTML = address;
+            document.getElementById('lat').innerHTML = place.geometry.location.lat();
+            document.getElementById('lon').innerHTML = place.geometry.location.lng();
+        });
+
+        autocomplete2.addListener('place_changed', function() {
+            infowindow.close();
+            marker.setVisible(false);
+            var place2 = autocomplete2.getPlace();
+            if (!place2.geometry) {
+                window.alert("Autocomplete's returned place contains no geometry");
+                return;
+            }
+      
+            // If the place has a geometry, then present it on a map.
+            if (place2.geometry.viewport) {
+                map.fitBounds(place2.geometry.viewport);
+            } else {
+                map.setCenter(place2.geometry.location);
+                map.setZoom(17);
+            }
+            marker.setIcon(({
+                url: place2.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
+            }));
+            marker.setPosition(place2.geometry.location);
+            marker.setVisible(true);
+        
+            var address = '';
+            if (place2.address_components) {
+                address = [
+                  (place2.address_components[0] && place2.address_components[0].short_name || ''),
+                  (place2.address_components[1] && place2.address_components[1].short_name || ''),
+                  (place2.address_components[2] && place2.address_components[2].short_name || '')
+                ].join(' ');
+            }
+        
+            infowindow.setContent('<div><strong>' + place2.name + '</strong><br>' + address);
+            infowindow.open(map, marker);
+          
+            // Location details
+            for (var i = 0; i < place2.address_components.length; i++) {
+                if(place2.address_components[i].types[0] == 'postal_code'){
+                    document.getElementById('postal_code2').innerHTML = place2.address_components[i].long_name;
+                }
+                if(place2.address_components[i].types[0] == 'country'){
+                    document.getElementById('country2').innerHTML = place2.address_components[i].long_name;
+                }
+            }
+            document.getElementById('location2').innerHTML = place2.formatted_address;
+            document.getElementById('lat2').innerHTML = place2.geometry.location.lat();
+            document.getElementById('lon2').innerHTML = place2.geometry.location.lng();
+
+            
+        });
+    }
+    </script>
+
+
+	<!-- <label> Username </label> 
+	<input type=”text” name=”username” value={{request.form.username}}> 
+	<label> Password </label> 
+	<input type=”password” name=”password” value={{request.form.password}}>  -->
+
+   
+ 
+	<button type="submit" id="submitBtn"> Search </button> 
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+    <script>
+        
+    let submitBtn = document.getElementById('submitBtn');
+  
+    // Adding event listener to form submit button 
+    submitBtn.addEventListener('click', (event) => {
+      
+        // Preventing form to submit
+        event.preventDefault();
+          
+        // Fetching Form data
+        let loc = document.getElementById('location').innerHTML;
+        let pc = document.getElementById('postal_code').innerHTML;
+        let country = document.getElementById('country').innerHTML;
+
+        let loc2 = document.getElementById('location2').innerHTML;
+        let pc2 = document.getElementById('postal_code2').innerHTML;
+        let country2 = document.getElementById('country2').innerHTML;
+        console.log(loc)
+        console.log(pc)
+        console.log(country)
+
+      
+        // jQuery Ajax Post Request
+        $.post('/showdrivers', {
+      
+            // Sending Form data
+            loc : loc,
+            pc : pc,
+            country : country,
+            loc2:loc2,
+            pc2:pc2,
+            country2:country2,
+            cid:"{{result.cid}}",
+            uname:"{{result.uname}}"
+
+        }, (response) => {
+      console.log(response)
+            window.location=response// Response from PHP back-end
+        });
+    });
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCFJ8VXOi4dfWgimXznK4JoL7jqGE-Ut44&callback=initMap" async defer></script>
