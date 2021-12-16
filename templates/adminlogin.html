@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-	  <h1>{{response}}</h1>
-  	<title>Welcome to My Taxi</title>
+  	<title>Welcome Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -18,7 +17,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Welcome to My Taxi</h2>
+					<h2 class="heading-section">Welcome Admin</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -29,7 +28,7 @@
 		      	</div>
 		      	<h3 class="text-center mb-4">Sign In</h3>
 						
-                  <form action="/home" class="login-form" method="get">
+                  <form action="/onadminlogin" class="login-form" method="get">
 		      		<div class="form-group">
 		      			<input type="text" class="form-control rounded-left" name="uname" placeholder="Username" required>
 		      		</div>
@@ -37,22 +36,15 @@
 	              <input type="password" class="form-control rounded-left" name="pwd" placeholder="Password" required>
 	            </div>
 	            <div class="form-group"> 
-	            	<!-- <button type="submit" onclick="login()" class="form-control btn btn-primary rounded submit px-3">Login</button> -->
-                        <button class="form-control btn btn-primary rounded submit px-3" type="submit">Login</button>
+	            	<button type="submit" onclick="adminlogin()" class="form-control btn btn-primary rounded submit px-3">Admin Login</button>
+                        <!-- <button class="form-control btn btn-primary rounded submit px-3" type="submit">Admin Login</button> -->
 	            </div>
 
-				<div class="form-group">
-					<a href="/adminlogpage">Admin_login</a>
-				</div>
 
-				<div class="form-group">
-					<a href="/driverlogpage">Driver_login</a>
-				</div>
-
-				 <div class="form-group">
-	            	<!-- <button type="submit" onclick="hc()" class="form-control btn btn-primary rounded submit px-3">Admin_login</button> -->
-                        <!-- <button class="form-control btn btn-primary rounded submit px-3" type="submit">Admin</button> -->
-	            <!-- </div> -->
+				<!-- <div class="form-group">
+	            	<button type="submit" onclick="hc()" class="form-control btn btn-primary rounded submit px-3">Admin_login</button>
+                        <button class="form-control btn btn-primary rounded submit px-3" type="submit">Admin</button>
+	            </div> -->
 	            <div class="form-group d-md-flex">
 	            	<div class="w-50">
 	            		<label class="checkbox-wrap checkbox-primary">Remember Me
@@ -60,9 +52,7 @@
 									  <span class="checkmark"></span>
 									</label>
 								</div>
-								<div class="w-50 text-md-right">
-									<a href="/signup1">New User? Sign-up</a>
-								</div>
+								
 	            </div>
 	          </form>
 	        </div>

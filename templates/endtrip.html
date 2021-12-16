@@ -1,0 +1,11 @@
+<form method="post" action="/beforefeedback">
+
+    <input type="hidden" name="cid" value="{{response.cid}}">
+                              <input type="hidden"name="szip" value="{{response.source_zip}}">
+                              <input type="hidden"name="dzip" value="{{response.destination_zip}}">
+                              <input type="hidden"name="dist" value="{{response.dist}}">
+                              <input type="hidden"name="estimated_time_minutes" value="{{response.estimated_time_minutes}}">
+                              <input type="hidden"name="est_arrival_time" value="{{response.eat}}">
+                              <input type="hidden"name="driver_id" value="{{response.driver_id}}">
+                              <input type="hidden"name="start_time" value="{{response.start_time}}">
+      <button class="form-control btn btn-primary rounded submit px-3" type="submit">End trip and pay</button>

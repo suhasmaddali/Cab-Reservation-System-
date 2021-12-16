@@ -1,0 +1,12 @@
+Merge mine and simrans work
+implement the trip displays and selection and based on that change the report.(whatever remaining implementation)
+update the er diagram and relational schema.
+perform query optimization
+write query optimization, db design part.
+implement admin changes.
+implement more graphs and present in report
+Check the abstract and introduction.
+document the work with proper annotation and readmes.
+
+Simran:
+Add view names and figure references

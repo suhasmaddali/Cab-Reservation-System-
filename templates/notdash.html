@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <body style="font-family:arial, sans-serif">
+    
+        <h1 style="text-align: center;">My Taxi Dashboard</a></h1>
+        <!-- <title>Welcome to My Taxi</title> -->
+    
+    </body>
+<body style="font-family:arial, sans-serif">
+    
+    <h6><a href="/fetchdata">Return to index page</a></h6>
+
+    <h1>{{header}}</h1>
+    
+    <div id="chart" class="chart"></div>
+    <div>{{description}}</div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON | safe}};
+    // var graphs = {grahJSON};
+    console.log(graphs)
+    Plotly.plot('chart',graphs,{});        
+</script>
+
+
+<body style="font-family:arial, sans-serif">
+    <h1>{{header3}}</h1>
+    <div id="chart2" class="chart"></div>
+    <div>{{description3}}</div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON3 | safe}};
+    Plotly.plot('chart2',graphs,{});        
+</script>
+
+<body style="font-family:arial, sans-serif">
+    <h1>{{header4}}</h1>
+    <div id="chart4" class="chart"></div>
+    <div>{{description4}}</div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON4 | safe}};
+    // var graphs = {grahJSON};
+    console.log(graphs)
+    Plotly.plot('chart4',graphs,{});        
+</script>
+
+<body style="font-family:arial, sans-serif">
+    <h1>{{header5}}</h1>
+    <div id="chart5" class="chart"></div>
+    <div>{{description5}}</div>
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON5 | safe}};
+    // var graphs = {grahJSON};
+    console.log(graphs)
+    Plotly.plot('chart5',graphs,{});        
+</script>
+
+<body style="font-family:arial, sans-serif">
+    <h1>{{header6}}</h1>
+    <div id="chart6" class="chart"></div>
+    <img src="{{ url_for('static',filename='images/wordcloud.png') }}" alt="wordcloud" style="border:5px solid black">        
+
+    <div>{{description6}}</div>
+</body>
