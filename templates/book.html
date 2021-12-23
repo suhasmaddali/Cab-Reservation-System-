@@ -1,0 +1,69 @@
+<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
+<form method="post" action="/cabarriving">
+<div class="container_12">
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name = "format-detection" content = "telephone=no" />
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href= "{{ url_for('static',filename='booking/css/booking.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/camera.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/owl.carousel.css') }}">
+    <link rel="stylesheet" href= "{{ url_for('static',filename='css/style.css') }}">
+    <script src="{{ url_for('static',filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery-migrate-1.2.1.js') }}"></script>
+    <!-- <script src="js/jquery-migrate-1.2.1.js"></script> -->
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/superfish.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.ui.totop.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.equalheights.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.mobilemenu.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.easing.1.3.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/owl.carousel.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/camera.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/jquery.mobile.customized.min.js') }}"></script>
+
+
+
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <!--<![endif]-->
+    <script src="{{ url_for('static',filename='booking/js/booking.js') }}"></script>
+					<div class="grid_5">
+						<h3>Booking Form</h3>
+						<form id="bookingForm">
+						
+						
+							<div class="clear"></div>
+							<div class="tmRadio">
+								<p>Comfort</p>
+								<input name="Comfort" value="4" type="radio" id="tmRadio0" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' checked/>
+								<span>4 seater</span>
+								<input name="Comfort" value="6" type="radio" id="tmRadio1" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>6 seater</span>
+								<input name="Comfort" value="8" type="radio" id="tmRadio2" data-constraints='@RadioGroupChecked(name="Comfort", groups=[RadioGroup])' />
+								<span>8 seater</span>
+							</div>
+							<div class="clear"></div>
+							<div class="fl1 fl2">
+								<em>Adults</em>
+								<select name="Adults" class="tmSelect auto" data-class="tmSelect tmSelect2" data-constraints="">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								</select>
+								<div class="clear height1"></div>
+							</div>
+							<input type="hidden" name="cid" value="{{response.cid}}">
+							<input type="hidden"name="szip" value="{{response.source_zip}}">
+							<input type="hidden"name="dzip" value="{{response.destination_zip}}">
+							<input type="hidden"name="dist" value="{{response.distance}}">
+							<input type="hidden"name="estimated_time_minutes" value="{{response.estimated_time_minutes}}">
+
+						
+							<button class="form-control btn btn-primary rounded submit px-3" type="submit">book</button>
+							
+							<div class="clear"></div>
+							<div class="tmTextarea">
+								<textarea name="Message" placeHolder="Message" data-constraints='@NotEmpty @Required @Length(min=20,max=999999)'></textarea>
+							</div>
+						</form>

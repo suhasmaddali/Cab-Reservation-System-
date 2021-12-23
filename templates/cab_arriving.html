@@ -1,0 +1,31 @@
+
+
+
+
+
+<h1>Car Details</h1>
+<ul>
+    <li>Driver Name: "{{response.drname}}"</li>
+    <li>Phone number: {{response.number}}</li>
+    <li>rating:{{response.rating}}</li>
+    <li>
+        Number plate:{{response.number_plate}}
+    </li>
+    <li>
+        ETA:{{response.ETA}}
+    </li>
+    <li>
+        carname:{{response.carname}}
+    </li>
+  </ul>
+
+  <form method="post" action="/tripbegins">
+
+  <input type="hidden" name="cid" value="{{response.customer_id}}">
+							<input type="hidden"name="szip" value="{{response.source_zip}}">
+							<input type="hidden"name="dzip" value="{{response.destination_zip}}">
+							<input type="hidden"name="dist" value="{{response.trip_distance}}">
+							<input type="hidden"name="estimated_time_minutes" value="{{response.estimated_time_minutes}}">
+                            <input type="hidden"name="est_arrival_time" value="{{response.est_arrival_time}}">
+                            <input type="hidden"name="driver_id" value="{{response.driver_id}}">
+    <button class="form-control btn btn-primary rounded submit px-3" type="submit">Begin trip driver is here</button>
