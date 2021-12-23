@@ -2,7 +2,9 @@
 
 ![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)  ![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![](	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-In this SQL problem, we would be designing an UI along with DB design of the cab reservation system. There are various contraints that are present when defining this problem. We would go over all the use cases and check the working respectively. 
+When we want to travel from one place to the other, one of the effective ways of doing would be to book cabs. Since there are a lot of services such as Uber and Lyft offering their services to get the people to move to their destination on time. 
+
+One of the challenges with the cab reservation system is that an user is not able to get an estimated time it takes for the driver to pickup in their current location. 
 
 <img src = "https://github.com/suhasmaddali/GIF-files/blob/main/taxigif.gif" width = "800"/>
  
