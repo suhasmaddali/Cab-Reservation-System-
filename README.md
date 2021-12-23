@@ -8,7 +8,7 @@ One of the challenges with the cab reservation system is that an user is not abl
 
 <img src = "https://github.com/suhasmaddali/GIF-files/blob/main/taxigif.gif" width = "800"/>
  
-We considered this project and thought of combating these challenges with the aid of MySQL and Flask. We've built an interactive UI that takes minimal information about the user along with provided the most accurate estimated of the wait times for the user. This leads to a good reduction in the wait times for users. 
+We considered this project and thought of combating these challenges with the aid of MySQL and Flask. We've built an interactive UI that takes minimal information about the user along with providing the most accurate estimated of the wait times for the user. This leads to a good reduction in the wait times for users. 
 
 ## 👉 Directions to download the repository and run the notebook 
 
