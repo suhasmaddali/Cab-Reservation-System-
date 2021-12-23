@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white) ![](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white) ![](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)  ![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white) ![](	https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-When we want to travel from one place to the other, one of the effective ways of doing would be to book cabs. Since there are a lot of services such as Uber and Lyft offering their services to get the people to move to their destination on time. 
+When we want to travel from one place to the other, one of the effective ways of doing would be to book cabs. Since there are a lot of services such as [Uber](https://www.uber.com/us/en/s/d/kochab/?ad_id=562430274936&adg_id=122583522621&campaign_id=14241218849&cre=562430274936&dev=c&dev_m=&fi_id=&gclid=Cj0KCQiA2ZCOBhDiARIsAMRfv9LnwQ76YLGjYfVhJ75p_PL03RxvoxfRvoCLVBtT6aezSfrLta8QLTMaAhzOEALw_wcB&gclsrc=aw.ds&kw=uber&kwid=kwd-169801042&match=e&net=g&placement=&tar=&utm_campaign=CM2141173-search-google-brand_1_6_US-Boston_driver_web_acq_cpc_en_Generic_Exact_uber_kwd-169801042_562430274936_122583522621_e_c&utm_source=AdWords_Brand) and Lyft offering their services to get the people to move to their destination on time. 
 
 One of the challenges with the cab reservation system is that an user is not able to get an estimated time it takes for the driver to pickup in their current location. 
 
