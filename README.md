@@ -13,7 +13,6 @@ One of the challenges with the cab reservation system is that an user is not abl
  ## Solution 
 * We considered this project and thought of combating these challenges with the aid of __MySQL__ and __Flask__. 
 * We've built an interactive UI that takes minimal information about the user along with providing the most accurate estimate of the wait time. 
-
 * As an end product, we get an UI that is quite easy for the user to understand and book a ride. 
 * In addition to this, machine learning is used to get the accurate estimates of the time it takes for the driver to arrive on time. 
 
