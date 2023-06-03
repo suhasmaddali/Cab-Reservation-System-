@@ -5,8 +5,6 @@
 ## Introduction
 Booking cabs is an efficient way to travel between different places. Services like [__Lyft__](https://www.lyft.com/drive-with-lyft?utm_source=google&utm_medium=cpc&utm_campaign=PAID_DAX_SRCH_US_PRO_WEB_DESK_BRND_LYFT_EXACT&adgroup=lyft_NA_NA&utm_term=lyft&device=c&matchtype=e&targetid=aud-445253257374:kwd-158399963&loc_physical_ms=9061331&loc_interest_ms=&network=g&devicemodel=&adposition=&campaign_id=1447389321&ad_id=511938195020&adgroup_id=54874112525&placement=&ref=&adname=210401_SC_RSA_MMWL_V1&gclid=Cj0KCQiA2ZCOBhDiARIsAMRfv9Lek_vwIst6HIq_bu11IKFQomD7eDRxzlduC8fHNMHJz6XYdI4DbD0aAtBREALw_wcB) offer reliable transportation options to ensure timely arrival at your destination. People from various parts of the world rely on cab services to move around. Therefore, it is crucial to prioritize customer satisfaction by providing excellent service.
 
- [__Lyft__]
-
 <img src = "https://github.com/suhasmaddali/GIF-files/blob/main/taxigif.gif" width = "800"/>
 
 ## Challenges
