@@ -8,9 +8,9 @@ Booking __cabs__ is an efficient way to travel between different places. Service
 <img src = "https://github.com/suhasmaddali/GIF-files/blob/main/taxigif.gif" width = "800"/>
 
 ## Challenges
-* One of the challenges with the cab reservation system is that an user is not able to get an accurate estimated time it takes for the driver to pickup in their current location. 
+* One of the __challenges__ with the cab reservation system is that an user is not able to get an accurate estimated time it takes for the driver to pickup in their current location. 
 * Furthermore, user interface (UI) for cab reservation is often complex which makes the user enter a lot of details before even booking a ride initially.
-* As a result, this slows down the process overall of picking an user respectively. 
+* As a result, this slows down the process overall of picking an __user__ respectively. 
  
  ## Solution 
 * We considered this project and thought of combating these challenges with the aid of __MySQL__ and __Flask__. 
